@@ -13,6 +13,8 @@ function render(image) {
   // Get A WebGL context
   /** @type {HTMLCanvasElement} */
   var canvas = document.getElementById("canvas");
+  canvas.width = image.width;
+  canvas.height = image.height;
   var gl = canvas.getContext("webgl");
   if (!gl) {
     return;
